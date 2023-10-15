@@ -10,12 +10,9 @@ env:
 jobs:
   test:
     name: Test
-    # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
-    # Service containers to run with the `test` container job
     services:
       postgres:
-        # Docker Hub image
         image: postgres:14
         env:
           POSTGRES_USER: postgres
